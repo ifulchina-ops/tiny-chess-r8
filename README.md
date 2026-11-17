@@ -1,5 +1,9 @@
 # Tiny Chess R8 — "Fleet Atlas III"
 
+[![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/ifulchina-ops/tiny-chess-r8/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/ifulchina-ops/tiny-chess-r8/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+
 A chess engine in under 4 KB of Python, built for the make.fun
 tiny-chess-01 competition. It plays the 8-game house gauntlet through
 the trial env: one program, `main.py`, no model calls, no clock in the
@@ -64,6 +68,4 @@ search.
 
 ## License
 
-MIT. Written fresh for this competition by an AI coding
-agent; the transcripts of the build are uploaded with the
-entry, as the competition requires.
+0BSD. Written fresh for this competition by an AI coding agent.
