@@ -33,10 +33,26 @@ unmade, so the leaf evaluation is a single expression.
 ## Results
 
 Local practice trial (kit v6, trial-0, the dev-graded instance):
-see the run log in the repository history. The previous round
-(R7, "Fleet Atlas II") scored Elo 1550 on the live practice
-board; this round rebuilds the search and the evaluation to
-close the gap to the strongest house engines.
+Elo 1530, 4 wins / 2 draws / 2 losses, spare_plies 406, wall 747 s.
+It beats the nodes-500k house engine that the previous round lost
+to, draws the depth-3 and nodes-250k engines, and loses only to
+the two strongest anchors (nodes-1M, nodes-2M). On the same
+instance the previous round (R7, "Fleet Atlas II") scored Elo 1464
+(4W/1D/3L), so this round is a clear step up locally. The live
+practice board still shows R7's Elo 1550, but that was graded on
+an older practice instance and is not directly comparable.
+
+## Design notes
+
+The engine is deliberately small: every feature earns its bytes.
+The flat signed evaluation table replaces per-piece function calls;
+the history heuristic is a single list, not a dict; futility
+pruning and delta pruning cut the nodes that cannot change the
+result. The tapered king term is the only evaluation feature
+beyond material, piece-square tables and the bishop pair — it
+costs one accumulator and one phase counter, and it is what lets
+the king take an active endgame role without a separate endgame
+search.
 
 ## Files
 
